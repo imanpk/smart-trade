@@ -3,7 +3,8 @@ from telegram.ext import Updater, CommandHandler, CallbackContext
 import json
 import os
 
-TELEGRAM_TOKEN = "7897271334:AAH-chPmIGh63PygjantKtDFl7NJw8MT8_E"
+TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
+CHAT_ID = int(os.environ["CHAT_ID"])  # حتماً به int تبدیل کن چون به صورت string خونده می‌شه
 bot = Bot(token=TELEGRAM_TOKEN)
 
 # ذخیره سیگنال در فایل
